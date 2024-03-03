@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Chat-app",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "khoubate",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "cors": "^2.8.5",
+    "express": "^4.18.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
