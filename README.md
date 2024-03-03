@@ -9,27 +9,35 @@ FastAPI and ReactJS chat app with Chat Engine.
 
 ## Step 1: Setting up a NodeJS server
 ### Create a new project for the backend and frontend.
-
+```bash
 mkdir chat-app
 cd chat-app
 mkdir backend
 cd backend
+```
 
 ### Initiate a new NodeJS project.
+
+```bash
 npm init # Hit enter for every step
+```
 
 ### Install dependencies.
+```bash
 npm i express cors axios
 npm i --save-dev nodemon
+```
 
 ### Update package.json with start script.
-
+```javascript
 "scripts": {
     "start": "nodemon index.js"
 }
+```
 
 ### Create index.js with basic server setup.
 
+```javascript
 // index.js
 const express = require("express");
 const cors = require("cors");
@@ -44,15 +52,19 @@ app.post("/authenticate", async (req, res) => {
 });
 
 app.listen(3001);
+```
 
 ### Start the server.
+```bash
 npm run start
+```
 
 ## Step 2: Connecting Node JS to ChatEngine.io
 Go to ChatEngine.io, sign up, and create a project. Note down the Project ID and Private Key.
 
 Update the /authenticate function in index.js to connect to Chat Engine.
 
+```javascript
 // index.js
 const axios = require("axios");
 
@@ -69,25 +81,34 @@ app.post("/authenticate", async (req, res) => {
     return res.status(e.response.status).json(e.response.data);
   }
 });
+```
+
 ## Step 3: Set up a React JS frontend
 ### Create a React JS project using Vite.
+```bash
+
 npm create vite@latest
+```
 
 Update the frontend/src/main.jsx and frontend/src/App.jsx files.
 
 Create AuthPage.jsx and ChatsPage.jsx files.
 
 Run the React JS app.
- 
+
+ ```bash
 npm install
 npm run dev
+```
 
 ## Part 4: Connect React to Node JS and Chat Engine
 ### Install axios in the frontend.
+```bash
 npm install axios
+```
 
 ### Update AuthPage.jsx to connect with the NodeJS server.
-
+```javascript
 // AuthPage.jsx
 import axios from "axios";
 
@@ -105,11 +126,15 @@ const AuthPage = (props) => {
 };
 
 export default AuthPage;
+```
 
 ### Install the react-chat-engine-pretty component.
+```bash
 npm install react-chat-engine-pretty
+```
 
 ### Update ChatsPage.jsx to connect your React App to your Chat Engine project.
+```javascript
 
 // ChatsPage.jsx
 import { PrettyChatWindow } from "react-chat-engine-pretty";
@@ -127,8 +152,8 @@ const ChatsPage = (props) => {
 };
 
 export default ChatsPage;
-
-
+```
 ### Add VITE_CHAT_ENGINE_PROJECT_ID to frontend/.env.local and use your own Project ID.
-
+```bash
 VITE_CHAT_ENGINE_PROJECT_ID=XXX
+```
