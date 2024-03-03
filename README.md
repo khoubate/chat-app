@@ -29,7 +29,7 @@ npm i --save-dev nodemon
 ```
 
 ### Update package.json with start script.
-```javascript
+```json
 "scripts": {
     "start": "nodemon index.js"
 }
