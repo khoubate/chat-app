@@ -1,8 +1,5 @@
 #  Fullstack Chat Project
-This project enables you to set up a full-stack chat for any frontend/backend combination, seamlessly connecting React, Vue, or Angular with your preferred backend.
-
-Real-time Chat App with NodeJS, ReactJS, and ChatEngine.io
-Build a feature-rich real-time chat application using Node JS, React JS, and ChatEngine.io. This application includes user authentication, socket connections, real-time messaging, image and file attachments, group chats, DMs, read receipts, and more!
+This project allows you to create a chat application with a full-stack setup for any combination of frontend and backend, smoothly connecting React, Vue, or Angular with your preferred backend. The real-time chat app is built using Node JS, React JS, and ChatEngine.io. It offers various features such as user authentication, socket connections, real-time messaging, image and file attachments, group chats, direct messages, read receipts, and more.
 
 ## What We'll Build
 FastAPI and ReactJS chat app with Chat Engine.
